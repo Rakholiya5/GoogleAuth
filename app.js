@@ -9,6 +9,7 @@ const cookieSession = require("cookie-session");
 const passport = require("passport");
 const sessions = require("express-session");
 const cookieParser = require("cookie-parser");
+const port = process.env.PORT || 3000;
 
 // Set up view engine
 app.set("view engine", "ejs");
@@ -50,6 +51,6 @@ app.get("/", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log(`Listening on port 3000`);
 });
